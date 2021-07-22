@@ -1,5 +1,92 @@
+:root {
+  --headfontcol: lightgrey; /*header font color*/
 
-p {
-  font-size: 24 px;
-  color: red;
+  --mainfontcol: lightgrey; /*primary font color*/
+  --mainfontsz: medium; /*primary font size*/
+
+/* Section formats for reports */
+
+
+}
+
+body{
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+  /* Basic paragraph format */
+    font-size: var(--mainfontsz);
+    color: var(--mainfontcol);
+    position: relative;
+    left: 1%;
+    width:95%;
+}
+
+h1{
+    font-size: xx-large;
+    color: var(--headfontcol);
+    font-weight: bold;
+}
+
+h2{
+    font-size: x-large;
+    color: var(--headfontcol);
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#media{
+    /* images div */
+    position:fixed;
+    width:50%;
+    height:100%;
+    left:50%;
+    top:0px;
+}
+
+#media1{
+    /* the actual image displayed within the image div */
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+#report{
+    /* the actual image displayed within the image div */
+    width:48%;
+    height:100%;
+}
+
+#history{
+  /* provided history */
+    position: relative;
+    left: 1%;
+    margin: 0px;
+    border: 2px solid #151515;
+    padding: 2px;
+    background-color: #171717;
+}
+
+#oneliner{
+  /* useful history */
+    position: relative;
+    left: 1%;
+}
+
+#findings{
+  /* findings */
+    position: relative;
+    left: 1%;
+    margin: 0px;
+    border: 2px solid #151515;
+    padding: 2px;
+    background-color: #171717;
+}
+
+#impression{
+  /* impression */
+    position: relative;
+    left: 1%;
 }

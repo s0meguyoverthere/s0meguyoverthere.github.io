@@ -1,15 +1,97 @@
+<!DOCTYPE html>
 <html>
-
 <head>
+  <title>Case</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
 
-  <title>AP's Homepage</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("#history").click(function(){
+        $("#history1").toggle();
+        $("#history2").toggle();
+      });
+
+      $("#oneliner").click(function(){
+        $("#oneliner1").toggle();
+        $("#oneliner2").toggle();
+      });
+
+      $("#findings").click(function(){
+        $("#findings1").toggle();
+        $("#findings2").toggle();
+      });
+
+      $("#impression").click(function(){
+        $("#impression1").toggle();
+        $("#impression2").toggle();
+      });
+
+    });
+  </script>
 
 </head>
 
 <body>
 
-<p>Hello World!</p>
+<h1>Hello World! - This is the case title</h1>
+<p>Case number #1</p>
+
+<div id="report">
+
+    <div id="history">
+      <h2>Provided History:</h2>
+      <p id="history1">(click to show/hide)</p>
+      <p id="history2" style="display: none;">chest pain</p>
+    </div>
+
+    <div id="media">
+      <img src="cxr.jpg" id="media1">
+    </div>
+
+    <div id="oneliner">
+      <h2>One-liner:</h2>
+      <p id="oneliner1">(click to show/hide)</p>
+      <p id="oneliner2" style="display: none;"> 53 yo male with sudden onset crushing substernal chest pain</p>
+    </div>
+
+    <div id="findings">
+      <h2>Findings:</h2>
+      <p id="findings1">(click to show/hide)</p>
+      <p id="findings2" style="display: none;">
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+        The cardiomediastinal shilloute is within normal limits. Clear lungs. No evidence of pleural effusion or pneumothorax. No acute osseous abnormalities. <br>
+      </p>
+    </div>
+
+    <div id="impression">
+      <h2>Impression:</h2>
+      <p id="impression1">(click to show/hide)</p>
+      <p id="impression2" style="display: none;"> No acute cardiopulmonary abnormality.</p>
+    </div>
+
+</div>
 
 </body>
 
