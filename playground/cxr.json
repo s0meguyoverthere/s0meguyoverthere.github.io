@@ -1,0 +1,11 @@
+[
+  {
+    "fmrn": 1,
+    "modality": "XR",
+    "givenhistory": "chest pain",
+    "usefulhistory": "52 yo male with 2 hrs crushing chest pain",
+    "findings": "normal",
+    "impression": "No acute cardiopulmonary abnormality.",
+    "diagnosis": "Normal"
+  }
+]

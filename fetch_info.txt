@@ -1,0 +1,16 @@
+  <h1>Case Presentation template - Title</h1>
+
+  <section id="onelinersec">
+    <h2>One-Liner:</h2>
+    <p id="onelinerp">1line</p>
+  </section>
+
+  <section id="findingssec">
+    <h2>Findings:</h2>
+    <p id="findingsp">findgins</p>
+  </section>
+
+  <section id="impressionsec">
+    <h2>Impression:</h2>
+    <p id="impressionp">impress</p>
+  </section>
