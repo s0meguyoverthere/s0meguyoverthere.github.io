@@ -9,10 +9,11 @@ async function getText(file) {
   let myObject = await fetch(file);
   let myText = await myObject.text();
   alert(myText);
+  let myData = JSON.parse(myText);
   return myText;
 };
 
-let filetext = getText(file);
+let filedata = getText(file);
 
 
 let onelinerstr = Preportdata.History; 
