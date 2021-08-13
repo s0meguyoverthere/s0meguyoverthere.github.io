@@ -15,9 +15,9 @@ async function getText(file) {
 let filedata = getText(file);
 
 
-let onelinerstr = myJSONdata.History; 
-let findingsstr = myJSONdata.Findings;
-let impressionstr = myJSONdata.Impression;
+let onelinerstr = myJSONdata.report[0].History; 
+let findingsstr = myJSONdata.report[0].Findings;
+let impressionstr = myJSONdata.report[0].Impression;
 
 alert(onelinerstr);
 
