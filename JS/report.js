@@ -1,8 +1,4 @@
 
-const reportdata = '{"age":52, "gender":"male", "History":"acute onset chest pain", "Findings":"no acute findings", "Impression": "no acute abnormality"}';
-
-const Preportdata = JSON.parse(reportdata);
-
 let file = 'jackets/1/report.json';
 
 let myJSONdata;

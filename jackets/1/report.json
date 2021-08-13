@@ -1,7 +1,11 @@
 {
 "age"           :       57,
 "gender"        :       "female",
-"History"       :       "sudden onset chest pain",
-"Findings"      :       "No acute findings",
-"Impression"    :       "No acute abnormality"
+"format"        :       "case",
+"modality"      :       "XR",
+"report"        :       [{
+                        "History"       :       "sudden onset chest pain",
+                        "Findings"      :       "No acute findings",
+                        "Impression"    :       "No acute abnormality"
+                        }]
 }
