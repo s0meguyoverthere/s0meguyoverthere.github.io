@@ -3,9 +3,22 @@ const reportdata = '{"age":52, "gender":"male", "History":"acute onset chest pai
 
 const Preportdata = JSON.parse(reportdata);
 
-let onelinerstr = Preportdata[2]; 
-let findingsstr = Preportdata[3];
-let impressionstr = Preportdata[4];
+let file = 'jackets/1/report.json';
+
+async function getText(file) {
+  let myObject = await fetch(file);
+  alert(myobject);
+  let myText = await myObject.text();
+}
+
+getText(file);
+
+
+let onelinerstr = Preportdata.History; 
+let findingsstr = Preportdata.Findings;
+let impressionstr = Preportdata.Impression;
+
+alert(onelinerstr);
 
 function fillreport () {
   document.getElementById('onelinerp').innerHTML = onelinerstr;
