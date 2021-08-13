@@ -9,6 +9,7 @@ async function getText(file) {
   let myObject = await fetch(file);
   alert(myObject);
   let myText = await myObject.text();
+  alert(myText);
 }
 
 getText(file);
