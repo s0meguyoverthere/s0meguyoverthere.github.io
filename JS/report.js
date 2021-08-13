@@ -12,7 +12,7 @@ async function getText(file) {
   alert(myText);
 }
 
-getText(file);
+let filetext = getText(file);
 
 
 let onelinerstr = Preportdata.History; 
