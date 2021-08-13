@@ -1,7 +1,11 @@
 
-let onelinerstr = "54 yo male with abrupt onset crushing substernal chest pain";
-let findingsstr = "Normal cardiomediostinal silhouette. Clear lungs. No evidence of pleural effusion or penumothorax.";
-let impressionstr = "No acute cardipulmonary abnormality.";
+const reportdata = '{"age":52, "gender":"male", "History":"acute onset chest pain", "Findings":"no acute findings", "Impression": "no acute abnormality"}';
+
+const Preportdata = JSON.parse(reportdata);
+
+let onelinerstr = Preportdata[2]; 
+let findingsstr = Preportdata[3];
+let impressionstr = Preportdata[4];
 
 function fillreport () {
   document.getElementById('onelinerp').innerHTML = onelinerstr;
