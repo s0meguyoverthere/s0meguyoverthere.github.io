@@ -7,10 +7,9 @@ let file = 'jackets/1/report.json';
 
 async function getText(file) {
   let myObject = await fetch(file);
-  alert(myObject);
   let myText = await myObject.text();
   alert(myText);
-}
+};
 
 let filetext = getText(file);
 
