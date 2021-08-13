@@ -5,20 +5,22 @@ const Preportdata = JSON.parse(reportdata);
 
 let file = 'jackets/1/report.json';
 
+let myJSONdata;
+
 async function getText(file) {
   let myObject = await fetch(file);
   let myText = await myObject.text();
   alert(myText);
-  let myData = JSON.parse(myText);
+  let myJSONdata = JSON.parse(myText);
   return myText;
 };
 
 let filedata = getText(file);
 
 
-let onelinerstr = Preportdata.History; 
-let findingsstr = Preportdata.Findings;
-let impressionstr = Preportdata.Impression;
+let onelinerstr = myJSONdata.History; 
+let findingsstr = myJSONdata.Findings;
+let impressionstr = myJSONdata.Impression;
 
 alert(onelinerstr);
 
