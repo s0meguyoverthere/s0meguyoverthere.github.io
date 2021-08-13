@@ -12,6 +12,7 @@ async function getText(file) {
   let myText = await myObject.text();
   alert(myText);
   let myJSONdata = JSON.parse(myText);
+  alert(myJSONdata.History);
   return myJSONdata;
 };
 
