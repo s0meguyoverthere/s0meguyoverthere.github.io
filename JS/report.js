@@ -13,7 +13,7 @@ async function getText(_JSONloc) {
   return JSONdata
 };
 
-let myJSONdata = await getText(file);
+let myJSONdata = getText(file);
 
 
 let onelinerstr = myJSONdata.report[0].History; 
