@@ -1,18 +1,18 @@
 
 let file = 'jackets/1/report.json';
+let medialoc = 'jackets/1/cxr.jpg';
+
+
 
 let myJSONdata;
-
-async function getText(file) {
-  let myObject = await fetch(file);
+// Load JSON Data
+async function getText(_filetarget,_fileOutput) {
+  let myObject = await fetch(_filetarget);
   let myText = await myObject.text();
-  alert(myText);
-  myJSONdata = JSON.parse(myText);
-  alert(myJSONdata.report[0].History);
-  return myJSONdata;
+  _fileOutput = JSON.parse(myText);
 };
 
-let filedata = getText(file);
+getText(file,myJSONdata);
 
 
 let onelinerstr = myJSONdata.report[0].History; 
@@ -27,4 +27,12 @@ function fillreport () {
   document.getElementById('impressionp').innerHTML = impressionstr;
 }
 
-let medialoc = 'jackets/1/cxr.jpg';
+function createreport(){
+
+
+  for (let i=0;i<=Object.keys(myJSONdata.report[0]).length;i++)
+  
+  // Object.keys(myJSONdata.report[0])[i]
+  
+
+}

@@ -1,11 +1,21 @@
 {
+"id"            :       00001,
 "age"           :       57,
 "gender"        :       "female",
-"format"        :       "case",
-"modality"      :       "XR",
+"format"        :       "study",   
 "report"        :       [{
                         "History"       :       "sudden onset chest pain",
                         "Findings"      :       "No acute findings",
                         "Impression"    :       "No acute abnormality"
-                        }]
+                        }],
+"media"        :        [
+                        [{
+                            "filename"      :   "1.jpg",
+                            "modality"      :   "XR",
+                            "cine"          :   false,
+                            "title"         :   "Title 1",
+                            "caption"       :   "Caption 1"
+                        }],
+
+                        ]
 }
