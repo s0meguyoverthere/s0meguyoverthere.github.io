@@ -25,14 +25,14 @@ function fillreport () {
   document.getElementById('onelinerp').innerHTML = onelinerstr;
   document.getElementById('findingsp').innerHTML = findingsstr;
   document.getElementById('impressionp').innerHTML = impressionstr;
-}
+};
 
-function createreport(){
+//function createreport(){
 
 
-  for (let i=0;i<=Object.keys(myJSONdata.report[0]).length;i++)
+  //for (let i=0;i<=Object.keys(myJSONdata.report[0]).length;i++)
   
   // Object.keys(myJSONdata.report[0])[i]
   
 
-}
+//}
