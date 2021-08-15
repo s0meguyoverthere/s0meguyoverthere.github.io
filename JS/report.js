@@ -4,15 +4,16 @@ let medialoc = 'jackets/1/cxr.jpg';
 
 
 
-let myJSONdata;
+
 // Load JSON Data
-async function getText(_filetarget,_fileOutput) {
-  let myObject = await fetch(_filetarget);
-  let myText = await myObject.text();
-  _fileOutput = JSON.parse(myText);
+async function getText(_JSONloc) {
+  let JSONobj = await fetch(_JSONloc);
+  let JSONtxt = await JSONobj.text();
+  let JSONdata = JSON.parse(JSONtxt);
+  return JSONdata
 };
 
-getText(file,myJSONdata);
+let myJSONdata = getText(file);
 
 
 let onelinerstr = myJSONdata.report[0].History; 
