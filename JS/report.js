@@ -10,7 +10,7 @@ async function getText(_JSONloc) {
   let JSONobj = await fetch(_JSONloc);
   let JSONtxt = await JSONobj.text();
   let JSONdata = JSON.parse(JSONtxt);
-  return JSONdata
+  return JSONdata.resolve();
 };
 
 let myJSONdata = getText(file);
