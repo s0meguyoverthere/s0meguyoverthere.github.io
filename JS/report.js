@@ -34,30 +34,31 @@ let file = 'jackets/1/report.json';
 let myJSONdata = getJSONdata(file);
 
 function getJSONdata(_JSONloc) {
+  var _JSONout;
   fetch(_JSONloc)
   .then(status)
   .then(json)
   .then(function(data) {
     console.log('Request succeeded with JSON response', data);
-    const _JSONout = data;
-    console.log('New Variable Name', _JSONout);
+    _JSONout = data;
   }).catch(function(error) {
     console.log('Request failed', error);
   });
-return _JSONout;
+  console.log('New Variable Name', _JSONout);
+  return _JSONout;
 }
 
 
-let onelinerstr = myJSONdata.report[0].History; 
-let findingsstr = myJSONdata.report[0].Findings;
-let impressionstr = myJSONdata.report[0].Impression;
+// let onelinerstr = myJSONdata.report[0].History; 
+// let findingsstr = myJSONdata.report[0].Findings;
+// let impressionstr = myJSONdata.report[0].Impression;
 
 alert(onelinerstr);
 
 function fillreport () {
-  document.getElementById('onelinerp').innerHTML = onelinerstr;
-  document.getElementById('findingsp').innerHTML = findingsstr;
-  document.getElementById('impressionp').innerHTML = impressionstr;
+  //document.getElementById('onelinerp').innerHTML = onelinerstr;
+  //document.getElementById('findingsp').innerHTML = findingsstr;
+  //document.getElementById('impressionp').innerHTML = impressionstr;
 };
 
 //function createreport(){
