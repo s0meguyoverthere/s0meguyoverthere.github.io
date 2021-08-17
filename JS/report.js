@@ -31,7 +31,7 @@ async function result(){
   //await can only be called from inside of async function. So we need async function for await name()
   
   let varr = await fname();
-  //  console.log(varr);  // Success
+   console.log(varr);  // Success
 }
 
 result()
