@@ -44,7 +44,7 @@ function getJSONdata(_JSONloc) {
   }).catch(function(error) {
     console.log('Request failed', error);
   });
-  console.log('New Variable Name', _JSONout);
+  console.log('New Variable Name');
   return _JSONout;
 }
 
