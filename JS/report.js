@@ -36,11 +36,13 @@ function json(response) {
 }
 
 //function getJSONdata(_JSONloc, _JSONout) {
-let myJSONdata = fetch(file)
+let myJSONdata;
+fetch(file)
   .then(status)
   .then(json)
   .then(function(data) {
     console.log('Request succeeded with JSON response', data);
+    myJSONdata = data;
   }).catch(function(error) {
     console.log('Request failed', error);
   });
