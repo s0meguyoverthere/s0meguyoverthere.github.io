@@ -41,7 +41,7 @@ function callApi(file) {
 }
 
 
-const { response, error } = callApi(url);
+const { response, error } = callApi(file);
 if (response) {
   // handle json decoded response
 } else {
