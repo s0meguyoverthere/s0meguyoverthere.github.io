@@ -34,7 +34,7 @@ let file = 'jackets/1/report.json';
 let myJSONdata = getJSONdata(file);
 
 function getJSONdata(_JSONloc) {
-  var _JSONout;
+  let _JSONout;
   fetch(_JSONloc)
   .then(status)
   .then(json)
@@ -44,7 +44,7 @@ function getJSONdata(_JSONloc) {
   }).catch(function(error) {
     console.log('Request failed', error);
   });
-  console.log('New Variable Name');
+  console.log(_JSON);
   return _JSONout;
 }
 
@@ -53,7 +53,7 @@ function getJSONdata(_JSONloc) {
 // let findingsstr = myJSONdata.report[0].Findings;
 // let impressionstr = myJSONdata.report[0].Impression;
 
-alert(onelinerstr);
+//alert(onelinerstr);
 
 function fillreport () {
   //document.getElementById('onelinerp').innerHTML = onelinerstr;
