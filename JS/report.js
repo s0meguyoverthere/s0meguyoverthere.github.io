@@ -19,7 +19,7 @@
 
 
 let file = 'jackets/1/report.json';
-let myJSONdata = getJSONdata(file);
+//let myJSONdata = getJSONdata(file);
 
 async function fetchMoviesJSON() {
   const response = await fetch(file);
@@ -27,7 +27,7 @@ async function fetchMoviesJSON() {
   return movies;
 }
 
-fetchMoviesJSON().then(movies => {
+let myJSONdata = fetchMoviesJSON().then(movies => {
   movies; // fetched movies
 });
 
