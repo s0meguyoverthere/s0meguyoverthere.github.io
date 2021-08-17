@@ -44,7 +44,7 @@ function getJSONdata(_JSONloc) {
   }).catch(function(error) {
     console.log('Request failed', error);
   });
-  console.log(_JSON);
+  console.log(_JSONout);
   return _JSONout;
 }
 
