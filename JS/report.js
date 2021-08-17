@@ -36,7 +36,7 @@ function json(response) {
 }
 
 //function getJSONdata(_JSONloc, _JSONout) {
-fetch(file)
+let myJSONdata = fetch(file)
   .then(status)
   .then(json)
   .then(function(data) {
