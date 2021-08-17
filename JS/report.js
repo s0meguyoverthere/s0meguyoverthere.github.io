@@ -29,21 +29,20 @@ function json(response) {
   return response.json()
 }
 
-
-let myJSONdata;
 let file = 'jackets/1/report.json';
-getJSONdata(file,myJSONdata);
+let myJSONdata = getJSONdata(file);
 
-function getJSONdata(_JSONloc, _JSONout) {
-fetch(_JSONloc)
+function getJSONdata(_JSONloc) {
+  fetch(_JSONloc)
   .then(status)
   .then(json)
   .then(function(data) {
     console.log('Request succeeded with JSON response', data);
-    _JSONout = data;
+    const _JSONout = data;
   }).catch(function(error) {
     console.log('Request failed', error);
   });
+return _JSONout;
 }
 
 
