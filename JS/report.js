@@ -31,7 +31,7 @@ const printAddress = async () => {
   console.log(a);
 };
 
-printAddress();
+let myJSONdata = printAddress();
 
 // //let myJSONdata = getJSONdata(file);
 
