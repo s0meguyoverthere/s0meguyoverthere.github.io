@@ -22,17 +22,11 @@ let file = 'jackets/1/report.json';
 
 async function loadJson(url) { // (1)
   let response = await fetch(url); // (2)
-
-  if (response.status == 200) {
-    let json = await response.json(); // (3)
-    return json;
-  }
-
-  throw new Error(response.status);
+  let json = await response.json(); // (3)
+  return json;
 }
 
-loadJson(file)
-  .catch(alert); // Error: 404 (4)
+let myJSONdata = loadJson(file);
 
 // //let myJSONdata = getJSONdata(file);
 
