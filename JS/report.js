@@ -1,10 +1,4 @@
 
-let file = 'jackets/1/report.json';
-let medialoc = 'jackets/1/cxr.jpg';
-
-
-
-
 // // Load JSON Data
 // function getJSONdata(_JSONloc, _JSONout) {
 //   let myJSONpromise = getJSONpromise(_JSONloc).then( response => {
@@ -35,18 +29,22 @@ function json(response) {
   return response.json()
 }
 
-//function getJSONdata(_JSONloc, _JSONout) {
+
 let myJSONdata;
-fetch(file)
+let file = 'jackets/1/report.json';
+getJSONdata(file,myJSONdata);
+
+function getJSONdata(_JSONloc, _JSONout) {
+fetch(_JSONloc)
   .then(status)
   .then(json)
   .then(function(data) {
     console.log('Request succeeded with JSON response', data);
-    myJSONdata = data;
+    _JSONout = data;
   }).catch(function(error) {
     console.log('Request failed', error);
   });
-//}
+}
 
 
 let onelinerstr = myJSONdata.report[0].History; 
