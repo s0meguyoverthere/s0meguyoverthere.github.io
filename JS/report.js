@@ -23,7 +23,7 @@ let file = 'jackets/1/report.json';
 async function fname() {
   const response = await fetch(file);
   const json = await response.json();
-  console.log('Request succeeded with JSON response', json);
+  //console.log('Request succeeded with JSON response', json);
   return json.result;
     }
 
@@ -31,7 +31,7 @@ async function result(){
   //await can only be called from inside of async function. So we need async function for await name()
   
   let varr = await fname();
-  console.log(varr);  // Success
+  // console.log(varr);  // Success
 }
 
 result()
