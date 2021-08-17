@@ -17,36 +17,46 @@
 //   return JSONdataP;
 // };
 
-function status(response) {
-  if (response.status >= 200 && response.status < 300) {
-    return Promise.resolve(response)
-  } else {
-    return Promise.reject(new Error(response.statusText))
-  }
-}
-
-function json(response) {
-  return response.json()
-}
-
 
 let file = 'jackets/1/report.json';
 let myJSONdata = getJSONdata(file);
 
-function getJSONdata(_JSONloc) {
-  let _JSONout;
-  fetch(_JSONloc)
-  .then(status)
-  .then(json)
-  .then(function(data) {
-    console.log('Request succeeded with JSON response', data);
-    _JSONout = data;
-  }).catch(function(error) {
-    console.log('Request failed', error);
-  });
-  console.log(_JSONout);
-  return _JSONout;
+async function fetchMoviesJSON() {
+  const response = await fetch(file);
+  const movies = await response.json();  
+  return movies;
 }
+
+fetchMoviesJSON().then(movies => {
+  movies; // fetched movies
+});
+
+// function status(response) {
+//   if (response.status >= 200 && response.status < 300) {
+//     return Promise.resolve(response)
+//   } else {
+//     return Promise.reject(new Error(response.statusText))
+//   }
+// }
+
+// function json(response) {
+//   return response.json()
+// }
+
+// function getJSONdata(_JSONloc) {
+//   let _JSONout;
+//   fetch(_JSONloc)
+//   .then(status)
+//   .then(json)
+//   .then(function(data) {
+//     console.log('Request succeeded with JSON response', data);
+//     _JSONout = data;
+//   }).catch(function(error) {
+//     console.log('Request failed', error);
+//   });
+//   console.log(_JSONout);
+//   return _JSONout;
+// }
 
 
 // let onelinerstr = myJSONdata.report[0].History; 
