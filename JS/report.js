@@ -29,6 +29,7 @@ function json(response) {
   return response.json()
 }
 
+
 let file = 'jackets/1/report.json';
 let myJSONdata = getJSONdata(file);
 
@@ -39,6 +40,7 @@ function getJSONdata(_JSONloc) {
   .then(function(data) {
     console.log('Request succeeded with JSON response', data);
     const _JSONout = data;
+    console.log('New Variable Name', _JSONout);
   }).catch(function(error) {
     console.log('Request failed', error);
   });
