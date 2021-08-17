@@ -19,17 +19,33 @@
 
 
 let file = 'jackets/1/report.json';
-//let myJSONdata = getJSONdata(file);
 
-async function fetchMoviesJSON() {
+async function fname() {
   const response = await fetch(file);
-  const movies = await response.json();  
-  return movies;
+  const json = await response.json();
+  return json.result;
+    }
+
+async function result(){
+  //await can only be called from inside of async function. So we need async function for await name()
+  
+  let varr = await fname();
+  console.log(varr)  // Success
 }
 
-let myJSONdata = fetchMoviesJSON().then(movies => {
-  movies; // fetched movies
-});
+result()
+
+// //let myJSONdata = getJSONdata(file);
+
+// async function fetchMoviesJSON() {
+//   const response = await fetch(file);
+//   const movies = await response.json();  
+//   return movies;
+// }
+
+// fetchMoviesJSON().then(movies => {
+//   myJSONdata; // fetched movies
+// });
 
 // function status(response) {
 //   if (response.status >= 200 && response.status < 300) {
