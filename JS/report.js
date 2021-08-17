@@ -20,21 +20,19 @@
 
 let file = 'jackets/1/report.json';
 
-async function fname() {
-  const response = await fetch(file);
-  const json = await response.json();
-  //console.log('Request succeeded with JSON response', json);
-  return json.resolve;
-    }
+async function loadJson(url) { // (1)
+  let response = await fetch(url); // (2)
 
-async function result(){
-  //await can only be called from inside of async function. So we need async function for await name()
-  
-  let varr = await fname();
-   console.log(varr);  // Success
+  if (response.status == 200) {
+    let json = await response.json(); // (3)
+    return json;
+  }
+
+  throw new Error(response.status);
 }
 
-result()
+loadJson(file)
+  .catch(alert); // Error: 404 (4)
 
 // //let myJSONdata = getJSONdata(file);
 
