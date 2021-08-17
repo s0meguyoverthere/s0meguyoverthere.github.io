@@ -20,33 +20,18 @@
 
 let file = 'jackets/1/report.json';
 
-async function loadJson(url) { // (1)
-  let response = await fetch(url); // (2)
-  let json = await response.json(); // (3)
-  return json;
-}
+const address = fetch(file)
+  .then((response) => response.json())
+  .then((user) => {
+    return user.report;
+  });
 
-let myJSONdata = loadJson(file);
+const printAddress = async () => {
+  const a = await address;
+  console.log(a);
+};
 
-function callApi(file) {
-  return fetch(file)
-    .then(response => {
-      if (response.ok) {
-        return response.json().then(response => ({ response }));
-      }
-
-      return response.json().then(error => ({ error }));
-    })
-  ;
-}
-
-
-const { response, error } = callApi(file);
-if (response) {
-  // handle json decoded response
-} else {
-  // handle json decoded 500 series response
-}
+printAddress();
 
 // //let myJSONdata = getJSONdata(file);
 
