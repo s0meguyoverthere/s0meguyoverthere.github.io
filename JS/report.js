@@ -29,7 +29,7 @@ async function loadJson(url) { // (1)
 let myJSONdata = loadJson(file);
 
 function callApi(file) {
-  return fetch(url)
+  return fetch(file)
     .then(response => {
       if (response.ok) {
         return response.json().then(response => ({ response }));
