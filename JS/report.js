@@ -22,8 +22,9 @@ let file = 'jackets/1/report.json';
 
 const JSONfetch = fetch(file)
   .then((response) => response.json())
-  .then((JSONdata) => {
-    return JSONdata.report;
+  //.then((JSONdata) => {
+    //return JSONdata.report;
+    return response;
   });
 
 const JSONreport = async () => {
