@@ -20,18 +20,22 @@
 
 let file = 'jackets/1/report.json';
 
-const address = fetch(file)
+const JSONfetch = fetch(file)
   .then((response) => response.json())
-  .then((user) => {
-    return user.report;
+  .then((JSONdata) => {
+    return JSONdata.report;
   });
 
-const printAddress = async () => {
-  const a = await address;
-  console.log(a);
-};
+const JSONreport = async () => {
+  const myJSONdata = await JSONfetch;
+  // console.log(myJSONdata);
+  let onelinerstr = myJSONdata.report[0].History; 
+  let findingsstr = myJSONdata.report[0].Findings;
+  let impressionstr = myJSONdata.report[0].Impression;
 
-let myJSONdata = printAddress();
+  fillreport();
+
+};
 
 // //let myJSONdata = getJSONdata(file);
 
@@ -80,9 +84,9 @@ let myJSONdata = printAddress();
 //alert(onelinerstr);
 
 function fillreport () {
-  //document.getElementById('onelinerp').innerHTML = onelinerstr;
-  //document.getElementById('findingsp').innerHTML = findingsstr;
-  //document.getElementById('impressionp').innerHTML = impressionstr;
+  document.getElementById('onelinerp').innerHTML = onelinerstr;
+  document.getElementById('findingsp').innerHTML = findingsstr;
+  document.getElementById('impressionp').innerHTML = impressionstr;
 };
 
 //function createreport(){
