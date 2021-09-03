@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Case Template Title</title>
+
+  <link href="CSS/main.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/svg+xml" href="sitemedia/cxrico.svg"/>  
+
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+   <script src="JS/report2.js"></script>
+</head>
+
+
+<body onload="fillpage(JSONdata)">
+  <a href="#main-content" style="display:none">Skip to main content</a> <!-- for acessibility software -->
+
+<!-- navigation and header content -->
+
+<main id="main-content">   <!-- main page content -->
+
+<article id = "loading">
+
+  <section id = "loadingcenter">
+
+    <p>The Study is loading, please be patient ....</p>
+
+  </section>
+
+</article>
+
+
+<article id="report">
+<!-- report placeholder -->
+
+</article> <!-- report -->
+
+<article id="ppdisplay">
+
+  <section id="ppdisplaytopnav">
+    <img src="sitemedia/rewind-64.png" title="First Image"> <!-- First Image Button -->
+    <img src="sitemedia/previous-64.png" title="Previous Image"> <!-- Previous Image Button -->
+    <img src="sitemedia/previous-64.png" style="transform:scaleX(-1)" title="Next Image"> <!-- Next Image Button -->
+    <img src="sitemedia/rewind-64.png" style="transform:scaleX(-1)" title="Last Image"> <!-- Last Image Button -->
+ </section>
+
+  <section id="ppdisplaywindow" onpointerover="focusover(this)" onpointerout="focusout(this)" onwheel="checkwheel(event)" onpointermove="trackmousemovement(event)" onpointerdown="pointerdownevent(event)" onpointerup="pointerupevent(event)">
+    <img src="DB/00001/pa.jpg" id="ppdisplaycontent">
+  </section>
+
+  <section id="ppdisplaybotnav">
+        <p id="sometexthere">Put Thumbnails here</p>
+  </section>
+</article> <!-- ppdisplay -->
+
+
+</main>
+
+</body>
+</html>

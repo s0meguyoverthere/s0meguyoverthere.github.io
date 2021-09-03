@@ -24,7 +24,7 @@
 
   <div id="media" onmouseover="focusover(this)" onmouseout="focusout(this)">
       <script type="text/javascript" language="JavaScript"> loadmedia();
-        document.write('<IMG SRC = "' + imagepath + '" id="mediaimg" NAME= "cineframe" ondragstart= "return false;" onmousedown= "preparetoscroll();" BORDER=0 alt="">');
+        document.write('<IMG SRC = "' + imagepath + '" id="mediaimg" NAME= "cineframe" ondragstart= "return false;" onmousedown= "preparetoscroll();" onpointermove="mouseMove()" BORDER=0 alt="">');
       </script>
   </div>
 

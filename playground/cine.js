@@ -17,20 +17,15 @@
     var scrollobject = 0 ;		// this contains the object of the cine to scroll through
 
 // Listen
-  document.onmousemove = mouseMove;
+  //document.onmousemove = mouseMove;
   document.onmouseup = mouseUp;
   document.onkeydown = checkKeycode;
   document.onwheel = checkWheel
 
 // functions
+function focusover(x) {  x.style.border = "thin solid yellow";}
+function focusout(x) {  x.style.border = "thin solid black";}
 
-function focusover(x) {
-  x.style.border = "thin solid yellow";
-}
-
-function focusout(x) {
-  x.style.border = "thin solid black";
-}
 
 function loadmedia() {  // Build page on load
     // Build cine array
@@ -93,7 +88,7 @@ function backcine()					 // scroll backwards in the cine by 1 image
 
   function checkWheel(ev)
   {
-  	var wheelY = event.deltaY;
+  	var wheelY = ev.deltaY;
   		if (wheelY > 0) {backcine();}
   		if (wheelY < 0) {advancecine();}
 

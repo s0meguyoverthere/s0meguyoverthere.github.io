@@ -65,7 +65,7 @@ body {
   position: absolute;
   height: var(--ppbotnavheight);
   width: 100%;
-  bottom: 0;
+  bottom: 0;      
   background-color: darkgrey;
 }
 
@@ -74,15 +74,42 @@ body {
   width: 100%;
   height: calc(100% - var(--ppbotnavheight) - var(--pptopnavheight));
   top: var(--pptopnavheight);
+  box-sizing: border-box;
+  border: thin solid black;
 }
 
 #ppdisplaycontent{
-  margin: 0;
-  width:100%;
   height:100%;
+  width:100%;  
   position: absolute;
   object-fit:contain;
-  top: 50%;
-  left: 50%;
+  top:50%;
+  left:50%;
   transform: translate(-50%, -50%);
+}
+
+#loading{
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#loadingcenter{
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 50%; /* Full width (cover the whole page) */
+  height: 50%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50% );
+  background-color: rgba(23, 115, 201, 0.5); /* Black background with opacity */
+  text-align: center;
 }
